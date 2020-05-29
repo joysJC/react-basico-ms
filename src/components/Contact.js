@@ -43,7 +43,8 @@ class Contact extends React.Component {
                   onChange={this.handleChange} />
             </div>
 
-            <Button type="submit" className="btn btn-primary btn-block">Guardar</Button>
+            <Button type="submit" disabled={this.state.nombre.trim() === '' || 
+               this.state.numero.trim() === ''} className="btn btn-primary btn-block">Guardar</Button>
          </form>
       );
    }
